@@ -31,18 +31,28 @@ bars:
       bottom: 0
       right: 0
     widgets:
-      left: ["home", "glazewm_workspaces", "active_window"]
+      left: ["home", "taskbar", "active_window"]
       center: ["clock"]
-      right: ["memory", "disk", "wifi", "volume", "battery", "power_menu"]
+      right:
+        [
+          "memory",
+          "disk",
+          "recycle_bin",
+          "wifi",
+          "taskbar",
+          "windows_workspaces",
+          "volume",
+          "power_menu",
+        ]
 widgets:
   home:
     type: "yasb.home.HomeWidget"
     options:
       label: "<span>\udb80\udf5c</span>"
       menu_list:
-        - { title: "Home", path: "~" }
         - { title: "Downloads", path: "~\\Downloads" }
-      system_menu: true
+        - { title: "Coding", path: "C:\\Coding" }
+      system_menu: false
       power_menu: false
       blur: true
       round_corners: true
@@ -51,30 +61,26 @@ widgets:
       alignment: "left"
       offset_left: 4
       offset_top: 0
-  glazewm_workspaces:
-    type: "glazewm.workspaces.GlazewmWorkspacesWidget"
-    options:
-      offline_label: "GlazeWM Offline"
-      hide_empty_workspaces: true
-      hide_if_offline: true
-  komorebi_workspaces:
-    type: "komorebi.workspaces.WorkspaceWidget"
-    options:
-      label_offline: "KomorebiWM Offline"
-      hide_empty_workspaces: true
-      hide_if_offline: true
   memory:
     type: "yasb.memory.MemoryWidget"
     options:
       label: "<span>\uf4bc</span> {virtual_mem_outof}"
       label_alt: "<span>\uf4bc</span> {virtual_mem_outof}"
-      update_interval: 10000
+      update_interval: 5000
       callbacks:
         on_right: "exec cmd /c Taskmgr"
+  recycle_bin:
+    type: "yasb.recycle_bin.RecycleBinWidget"
+    options:
+      label: "<span>{icon}</span> Items {items_count}"
+      label_alt: "Items {items_count}"
+      callbacks:
+        on_left: "exec cmd /c start shell:RecycleBinFolder"
+        on_right: "exec cmd /c start shell:RecycleBinFolder"
   disk:
     type: "yasb.disk.DiskWidget"
     options:
-      label: "<span>\uf473</span> disks"
+      label: "<span>\uf473</span> Discos"
       label_alt: "<span>\uf473</span>"
       group_label:
         volume_labels:
@@ -124,12 +130,27 @@ widgets:
       max_length: 40
       max_length_ellipsis: "..."
       monitor_exclusive: true
+  windows_workspaces:
+    type: "yasb.windows_desktops.WorkspaceWidget"
+    options:
+      label_workspace_btn: "\udb81\udc3d"
+      label_workspace_active_btn: "\udb81\udc3e"
+      container_padding:
+        top: 0
+        left: 8
+        bottom: 0
+        right: 8
+      btn_shadow:
+        enabled: true
+        color: "black"
+        radius: 3
+        offset: [1, 1]
   clock:
     type: "yasb.clock.ClockWidget"
     options:
       label: "<span>\uf017</span>{%H:%M}"
       label_alt: "<span>\uf017</span>{%A, %B %d. %Y %H:%M}"
-      locale: "hu_HU"
+      locale: "es_ES.UTF-8"
       timezones: []
       calendar:
         round_corners: true
@@ -137,6 +158,28 @@ widgets:
         border_color: "#7aa2f7"
         alignment: "center"
         offset_top: 0
+  taskbar:
+    type: "yasb.taskbar.TaskbarWidget"
+    options:
+      icon_size: 16
+      animation:
+        enabled: true
+        duration: 200
+        type: "fadeInOut"
+      title_label:
+        enabled: false
+        show: "focused"
+        min_length: 10
+        max_length: 30
+      ignore_apps:
+        processes: []
+        titles: []
+        classes: []
+      container_padding:
+        top: 0
+        left: 8
+        bottom: 0
+        right: 8
   weather:
     type: "yasb.weather.WeatherWidget"
     options:
@@ -210,14 +253,6 @@ widgets:
         offset_top: 0
       callbacks:
         on_right: "toggle_mute"
-  battery:
-    type: "yasb.battery.BatteryWidget"
-    options:
-      label: "<span>{icon}</span>{percent}%"
-      label_alt: "<span>{icon}</span> {percent}% | time: {time_remaining}"
-      #hide_unsupported: true
-      charging_options:
-        icon_format: "{charging_icon}"
   power_menu:
     type: "yasb.power_menu.PowerMenuWidget"
     options:
