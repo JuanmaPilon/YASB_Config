@@ -1,10 +1,6 @@
 watch_stylesheet: true
 watch_config: true
 debug: false
-komorebi:
-  start_command: "komorebic start --whkd"
-  stop_command: "komorebic stop --whkd"
-  reload_command: "komorebic stop --whkd && komorebic start --whkd"
 bars:
   primary-bar:
     enabled: true
@@ -31,16 +27,15 @@ bars:
       bottom: 0
       right: 0
     widgets:
-      left: ["home", "taskbar", "active_window"]
+      left: ["home", "media", "taskbar", "active_window"]
       center: ["clock"]
-      right:
-        [
+      right: [
+          # "windows_workspaces",
+          "cpu",
           "memory",
           "disk",
           "recycle_bin",
-          "wifi",
-          "taskbar",
-          "windows_workspaces",
+          # "wifi",
           "volume",
           "power_menu",
         ]
@@ -61,14 +56,87 @@ widgets:
       alignment: "left"
       offset_left: 4
       offset_top: 0
+  cpu:
+    type: "yasb.cpu.CpuWidget"
+    options:
+      label: "<span>\uf4bc</span> {info[percent][total]}%"
+      label_alt: "<span>\uf4bc</span> {info[cpu_percent]}"
+      update_interval: 2000
+      histogram_num_columns: 8
+      callbacks:
+        on_left: "exec cmd /c start taskmgr"
+      label_shadow:
+        enabled: true
+        color: "black"
+        radius: 3
+        offset: [1, 1]
   memory:
     type: "yasb.memory.MemoryWidget"
     options:
-      label: "<span>\uf4bc</span> {virtual_mem_outof}"
+      label: "<span>\uefc5</span> {virtual_mem_outof}"
       label_alt: "<span>\uf4bc</span> {virtual_mem_outof}"
       update_interval: 5000
       callbacks:
         on_right: "exec cmd /c Taskmgr"
+  media:
+    type: "yasb.media.MediaWidget"
+    options:
+      label: "{title} - {artist}"
+      label_alt: "{title}"
+      hide_empty: true
+      callbacks:
+        on_left: "toggle_label"
+        on_middle: "do_nothing"
+        on_right: "do_nothing"
+      max_field_size:
+        label: 25
+        label_alt: 20
+      show_thumbnail: true
+      controls_only: false
+      controls_left: true
+      controls_hide: false
+      thumbnail_alpha: 80
+      thumbnail_padding: 20
+      thumbnail_corner_radius: 20
+      scrolling_label:
+        enabled: true
+        update_interval_ms: 33
+        style: "left" # can be "left", "right", "bounce", "bounce-ease"
+        separator: " | "
+        label_padding: 1
+        # Easing curve params: https://www.desmos.com/calculator/j7eamemxzi
+        ease_slope: 20
+        ease_pos: 0.8
+        ease_min: 0.5
+      icons:
+        prev_track: "<span style='color:#ADD8E6; font-size:15px'>\uf048</span> "
+        next_track: " <span style='color:#ADD8E6; font-size:15px'>\uf051</span> "
+        play: " <span style='color:#ADD8E6; font-size:15px'>\uf04b</span> "
+        pause: " <span style='color:#ADD8E6; font-size:15px'>\uf04d</span> "
+      media_menu:
+        blur: false
+        round_corners: true
+        round_corners_type: "normal"
+        border_color: "system"
+        alignment: "right"
+        direction: "down"
+        offset_top: 6
+        offset_left: 0
+        thumbnail_corner_radius: 8
+        thumbnail_size: 200
+        max_title_size: 80
+        max_artist_size: 20
+        show_source: true
+      media_menu_icons:
+        play: "  \uf04b"
+        pause: "  \uf04d"
+        prev_track: "  \uf048"
+        next_track: "  \ue893"
+      label_shadow:
+        enabled: true
+        color: "black"
+        radius: 3
+        offset: [1, 1]
   recycle_bin:
     type: "yasb.recycle_bin.RecycleBinWidget"
     options:
@@ -180,38 +248,6 @@ widgets:
         left: 8
         bottom: 0
         right: 8
-  weather:
-    type: "yasb.weather.WeatherWidget"
-    options:
-      label: "<span>{icon}</span> {temp}"
-      label_alt: "{location}: {conditions}, Min {min_temp}, Max {max_temp}, Humidity {humidity}"
-      api_key: "24b6c2cda6d84066b0304531241908"
-      update_interval: 600
-      hide_decimal: true
-      location: "Hungary, Eger"
-      units: "metric"
-      callbacks:
-        on_left: "toggle_card"
-      icons:
-        sunnyDay: "\udb81\udd99"
-        clearNight: "\ue3c2"
-        cloudyDay: "\ue21d"
-        cloudyNight: "\ue226"
-        rainyDay: "\ue371"
-        rainyNight: "\ue371"
-        snowyIcyDay: "\udb81\udf17"
-        snowyIcyNight: "\udb81\udf17"
-        blizzardDay: "\udb81\udd99"
-        default: "\udb81\udd99"
-      weather_card:
-        blur: true
-        round_corners: true
-        round_corners_type: "small"
-        border_color: "#7aa2f7"
-        alignment: "center"
-        direction: "down"
-        offset_top: 0
-        icon_size: 48
   wifi:
     type: "yasb.wifi.WifiWidget"
     options:
