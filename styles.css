@@ -169,6 +169,13 @@
 /* ================= */
 /* === DISK WIDGET === */
 /* ================= */
+.disk-widget {
+  background-color: var(--crust);
+  margin: 4px 0;
+  border-radius: 12px;
+  border: 0;
+}
+
 .disk-widget .icon {
   color: var(--teal);
 }
@@ -361,18 +368,41 @@
 }
 
 /* ==================== */
-/* === MEMORY WIDGET === */
+/* === CPU WIDGET === */
 /* ==================== */
-.memory-widget .icon {
-  color: var(--mauve);
+.cpu-widget {
+  background-color: var(--crust);
+  margin: 4px 0;
+  border-radius: 12px;
+  border: 0;
 }
 
 .cpu-widget .icon {
   color: var(--sapphire);
 }
 
+/* ==================== */
+/* === MEMORY WIDGET === */
+/* ==================== */
+.memory-widget {
+  background-color: var(--crust);
+  margin: 4px 0;
+  border-radius: 12px;
+  border: 0;
+}
+
+.memory-widget .icon {
+  color: var(--mauve);
+}
+
+/* ==================== */
+/* === MEDIA WIDGET === */
+/* ==================== */
 .media-widget {
-  padding: 0 5px;
+  background-color: var(--crust);
+  margin: 4px 0;
+  border-radius: 12px;
+  border: 0;
 }
 
 .media-widget .label {

@@ -27,10 +27,11 @@ bars:
       bottom: 0
       right: 0
     widgets:
-      left: ["home", "media", "taskbar", "active_window"]
-      center: ["clock"]
+      left: ["home", "media", "taskbar"]
+      center: ["active_window"]
       right: [
           # "windows_workspaces",
+          "clock",
           "cpu",
           "memory",
           "disk",
@@ -73,11 +74,12 @@ widgets:
   memory:
     type: "yasb.memory.MemoryWidget"
     options:
-      label: "<span>\uefc5</span> {virtual_mem_outof}"
-      label_alt: "<span>\uf4bc</span> {virtual_mem_outof}"
-      update_interval: 5000
+      label: "<span>\uefc5</span>{virtual_mem_outof}"
+      label_alt: "<span>\uf4bc</span>{virtual_mem_outof}"
+      update_interval: 2000
       callbacks:
         on_right: "exec cmd /c Taskmgr"
+        on_left: "do_nothing"
   media:
     type: "yasb.media.MediaWidget"
     options:
@@ -89,7 +91,7 @@ widgets:
         on_middle: "do_nothing"
         on_right: "do_nothing"
       max_field_size:
-        label: 25
+        label: 20
         label_alt: 20
       show_thumbnail: true
       controls_only: false
@@ -148,11 +150,12 @@ widgets:
   disk:
     type: "yasb.disk.DiskWidget"
     options:
-      label: "<span>\uf473</span> Discos"
+      label: "<span>\uf473</span> Disk"
       label_alt: "<span>\uf473</span>"
       group_label:
         volume_labels:
           [
+            "A",
             "C",
             "D",
             "E",
