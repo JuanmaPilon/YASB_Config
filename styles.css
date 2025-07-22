@@ -1,6 +1,4 @@
-/* ===================== */
 /* === COLOR VARIABLES === */
-/* ===================== */
 :root {
   /* Catppuccin Mocha color palette */
   --rosewater: #f5e0dc;
@@ -39,9 +37,7 @@
   --crust: rgba(17, 17, 27, 0.75);
 }
 
-/* ================= */
 /* === BASE STYLES === */
-/* ================= */
 * {
   font-size: 12px;
   color: var(--subtext0);
@@ -51,9 +47,7 @@
   padding: 0;
 }
 
-/* ================= */
 /* === BAR LAYOUT === */
-/* ================= */
 .yasb-bar {
   padding: 0;
   margin: 0;
@@ -79,9 +73,15 @@
   margin: 0 4px 0 0;
 }
 
-/* ==================== */
 /* === POWER MENU === */
-/* ==================== */
+
+.power-menu-widget {
+  background-color: var(--crust);
+  margin: 4px 0;
+  border-radius: 12px;
+  border: 0;
+}
+
 .power-menu-widget .label {
   color: var(--red);
   font-size: 13px;
@@ -133,14 +133,6 @@
 .power-menu-popup .button.cancel .label {
   color: var(--red);
   margin: 0;
-}
-
-/* ==================== */
-/* === VOLUME WIDGET === */
-/* ==================== */
-.volume-widget .icon {
-  color: var(--blue);
-  margin: 1px 2px 0 0;
 }
 
 /* Audio dropdown menu */
@@ -219,6 +211,19 @@
 .disk-group-label-size {
   font-size: 12px;
   color: rgba(205, 214, 244, 0.5);
+}
+
+/* === VOLUME WIDGET === */
+.volume-widget {
+  background-color: var(--crust);
+  margin: 4px 0;
+  border-radius: 12px;
+  border: 0;
+}
+
+.volume-widget .icon {
+  color: var(--blue);
+  margin: 1px 2px 0 0;
 }
 
 /* ================= */
@@ -395,9 +400,7 @@
   color: var(--mauve);
 }
 
-/* ==================== */
 /* === MEDIA WIDGET === */
-/* ==================== */
 .media-widget {
   background-color: var(--crust);
   margin: 4px 0;
@@ -411,9 +414,7 @@
   font-weight: 800;
 }
 
-/* ================= */
 /* === UPTIME WIDGET === */
-/* ================= */
 .uptime {
   font-size: 14px;
   margin-bottom: 10px;
@@ -421,9 +422,7 @@
   font-weight: 600;
 }
 
-/* ================= */
 /* === HOME WIDGET === */
-/* ================= */
 .home-widget {
   padding: 0 4px 0 12px;
 }
