@@ -35,23 +35,23 @@
   --base: #1e1e2e;
   --mantle: rgba(24, 24, 37, 0.5);
   --crust: rgba(17, 17, 27, 0.75);
+  --transparent: rgba(0, 0, 0, 0.01);
 }
 
 /* === BASE STYLES === */
 * {
-  font-size: 12px;
+  font-size: 14px;
   color: var(--subtext0);
   font-weight: 700;
   font-family: "JetBrainsMono NFP";
   margin: 0;
   padding: 0;
+  color: white;
 }
 
 /* === BAR LAYOUT === */
 .yasb-bar {
-  padding: 0;
-  margin: 0;
-  background-color: var(--crust);
+  background-color: rgba(0, 0, 0, 0.01);
 }
 
 .widget {
@@ -68,7 +68,7 @@
 }
 
 .icon {
-  font-size: 16px;
+  font-size: 18px;
   margin: 0 4px 0 0;
 }
 
@@ -105,6 +105,21 @@
   max-height: 1px;
   background-color: var(--overlay0);
   margin: 0 8px;
+}
+
+/* === AUDIO WIDGET === */
+.audio-menu {
+  background-color: var(--mantle);
+}
+
+.audio-container .device {
+  font-size: 20px;
+  background-color: transparent;
+  border: none;
+  padding: 6px 8px 6px 4px;
+  margin: 2px 0;
+  font-size: 12px;
+  border-radius: 4px;
 }
 
 /* === MEDIA WIDGET === */
@@ -190,9 +205,7 @@
   background-color: var(--mantle);
 }
 
-/* ====================== */
 /* === WORKSPACE WIDGET === */
-/* ====================== */
 .glazewm-workspaces {
   background-color: var(--crust);
   margin: 4px 0;
@@ -214,16 +227,12 @@
   font-weight: 900;
 }
 
-/* ===================== */
 /* === BATTERY WIDGET === */
-/* ===================== */
 .battery-widget .icon {
   color: var(--flamingo);
 }
 
-/* ==================== */
 /* === CPU WIDGET === */
-/* ==================== */
 .cpu-widget {
   background-color: var(--crust);
   margin: 4px 0;
@@ -299,34 +308,6 @@
   color: rgba(205, 214, 244, 0.5);
 }
 
-/* === VOLUME WIDGET === */
-.volume-widget {
-  background-color: var(--crust);
-  margin: 4px 0;
-  border-radius: 12px;
-  border: 0;
-}
-
-.volume-widget .icon {
-  color: var(--blue);
-  margin: 1px 2px 0 0;
-}
-
-/* === AUDIO WIDGET === */
-.audio-menu {
-  background-color: var(--mantle);
-}
-
-.audio-container .device {
-  font-size: 20px;
-  background-color: transparent;
-  border: none;
-  padding: 6px 8px 6px 4px;
-  margin: 2px 0;
-  font-size: 12px;
-  border-radius: 4px;
-}
-
 .audio-container .device.selected {
   background-color: rgba(255, 255, 255, 0.085);
 }
@@ -335,11 +316,37 @@
   background-color: rgba(255, 255, 255, 0.06);
 }
 
+/* === BIN WIDGET === */
+.recycle-bin-widget {
+  background-color: var(--crust);
+  margin: 1px 0px;
+  border-radius: 9px;
+  border: 0;
+}
+
+.recycle-bin-widget .icon {
+  color: var(--maroon);
+  margin: 0px 0px 0px 0px;
+}
+
+/* === VOLUME WIDGET === */
+.volume-widget {
+  background-color: var(--crust);
+  margin: 1px 0px;
+  border-radius: 9px;
+  border: 0;
+}
+
+.volume-widget .icon {
+  color: var(--blue);
+  margin: 0px 0px 0px 0px;
+}
+
 /* === POWER MENU === */
 .power-menu-widget {
   background-color: var(--crust);
-  margin: 4px 0;
-  border-radius: 12px;
+  margin: 1px 0px;
+  border-radius: 9px;
   border: 0;
 }
 
@@ -393,12 +400,4 @@
 .power-menu-popup .button.cancel .label {
   color: var(--red);
   margin: 0;
-}
-
-/* === UPTIME WIDGET === */
-.uptime {
-  font-size: 14px;
-  margin-bottom: 10px;
-  color: var(--surface2);
-  font-weight: 600;
 }
