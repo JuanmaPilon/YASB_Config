@@ -28,18 +28,8 @@ bars:
       right: 0
     widgets:
       left: ["home", "media"]
-      center: ["taskbar"]
-      right: [
-          # "windows_workspaces",
-          "clock",
-          "cpu",
-          "memory",
-          "disk",
-          "bin",
-          # "wifi",
-          "volume",
-          "power_menu",
-        ]
+      center: ["taskbar", "launchpad"]
+      right: ["clock", "cpu", "memory", "disk", "bin", "volume", "power_menu"]
 widgets:
   home:
     type: "yasb.home.HomeWidget"
@@ -57,6 +47,37 @@ widgets:
       alignment: "left"
       offset_left: 4
       offset_top: 0
+  launchpad:
+    type: "yasb.launchpad.LaunchpadWidget"
+    options:
+      label: "<span>\udb85\udcde</span>"
+      search_placeholder: "Search for apps..."
+      app_icon_size: 60
+      window:
+        fullscreen: false
+        width: 600
+        height: 400
+        overlay_block: true
+      window_style:
+        enable_blur: true
+        round_corners: true
+        round_corners_type: "normal"
+        border_color: "system"
+      window_animation:
+        fade_in_duration: 200
+        fade_out_duration: 200
+      callbacks:
+        on_left: "toggle_launchpad"
+      app_title_shadow:
+        enabled: true
+        color: "#00000090"
+        offset: [1, 1]
+        radius: 2
+      app_icon_shadow:
+        enabled: true
+        color: "#00000090"
+        offset: [0, 2]
+        radius: 8
   cpu:
     type: "yasb.cpu.CpuWidget"
     options:
