@@ -27,15 +27,15 @@ bars:
       bottom: 0
       right: 0
     widgets:
-      left: ["home", "media", "taskbar"]
-      center: ["active_window"]
+      left: ["home", "media"]
+      center: ["taskbar"]
       right: [
           # "windows_workspaces",
           "clock",
           "cpu",
           "memory",
           "disk",
-          "recycle_bin",
+          "bin",
           # "wifi",
           "volume",
           "power_menu",
@@ -139,14 +139,13 @@ widgets:
         color: "black"
         radius: 3
         offset: [1, 1]
-  recycle_bin:
+  bin:
     type: "yasb.recycle_bin.RecycleBinWidget"
     options:
       label: "<span>{icon}</span> Items {items_count}"
       label_alt: "Items {items_count}"
       callbacks:
         on_left: "exec cmd /c start shell:RecycleBinFolder"
-        on_right: "exec cmd /c start shell:RecycleBinFolder"
   disk:
     type: "yasb.disk.DiskWidget"
     options:
@@ -232,7 +231,7 @@ widgets:
   taskbar:
     type: "yasb.taskbar.TaskbarWidget"
     options:
-      icon_size: 16
+      icon_size: 24
       animation:
         enabled: true
         duration: 200
@@ -248,9 +247,9 @@ widgets:
         classes: []
       container_padding:
         top: 0
-        left: 8
+        left: 0
         bottom: 0
-        right: 8
+        right: 0
   wifi:
     type: "yasb.wifi.WifiWidget"
     options:
@@ -300,11 +299,9 @@ widgets:
       blur: False
       blur_background: True
       animation_duration: 200
-      button_row: 5
+      button_row: 3
       buttons:
         shutdown: ["\uf011", "Shut Down"]
         restart: ["\uead2", "Restart"]
-        signout: ["\udb80\udf43", "Sign out"]
-        hibernate: ["\uf28e", "Hibernate"]
         sleep: ["\u23fe", "Sleep"]
         cancel: ["", "Cancel"]

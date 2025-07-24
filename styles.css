@@ -74,11 +74,14 @@
 
 /* === HOME WIDGET === */
 .home-widget {
-  padding: 0 4px 0 12px;
+  background-color: var(--crust);
+  padding: 1px 0px 0px 4px;
+  margin: 1px 1px;
+  border-radius: 5px;
 }
 
 .home-widget .icon {
-  font-size: 18px;
+  font-size: 20px;
   color: var(--subtext1);
 }
 
@@ -136,25 +139,6 @@
   font-weight: 800;
 }
 
-/* === CLOCK WIDGET === */
-.clock-widget {
-  background-color: var(--crust);
-  margin: 4px 0;
-  border-radius: 12px;
-  border: 0;
-}
-
-.clock-widget .icon {
-  font-size: 14px;
-  color: var(--sky);
-}
-
-.clock-widget .label {
-  font-size: 14px;
-  font-weight: 700;
-  color: var(--subtext0);
-}
-
 /* Calendar dropdown */
 .calendar {
   background-color: var(--mantle);
@@ -201,71 +185,56 @@
   margin-top: -20px;
 }
 
-.weather-card {
-  background-color: var(--mantle);
-}
-
-/* === WORKSPACE WIDGET === */
-.glazewm-workspaces {
+/* === CLOCK WIDGET === */
+.clock-widget {
   background-color: var(--crust);
-  margin: 4px 0;
-  border-radius: 12px;
+  margin: 1px 0px;
+  border-radius: 9px;
   border: 0;
 }
 
-.glazewm-workspaces .ws-btn {
-  font-size: 14px;
-  border: none;
-  color: var(--overlay0);
-  padding: 0 6px;
-  cursor: pointer;
-}
-
-.glazewm-workspaces .ws-btn.active_populated,
-.glazewm-workspaces .ws-btn.active_empty {
-  color: var(--red);
-  font-weight: 900;
-}
-
-/* === BATTERY WIDGET === */
-.battery-widget .icon {
-  color: var(--flamingo);
+.clock-widget .icon {
+  color: var(--sky);
+  margin: 0px 0px 0px 0px;
 }
 
 /* === CPU WIDGET === */
 .cpu-widget {
   background-color: var(--crust);
-  margin: 4px 0;
-  border-radius: 12px;
+  margin: 1px 0px;
+  border-radius: 9px;
   border: 0;
 }
 
 .cpu-widget .icon {
   color: var(--sapphire);
+  margin: 0px 0px 0px 0px;
 }
 
 /* === MEMORY WIDGET === */
 .memory-widget {
   background-color: var(--crust);
-  margin: 4px 0;
-  border-radius: 12px;
+  margin: 1px 0px;
+  border-radius: 9px;
   border: 0;
 }
 
 .memory-widget .icon {
   color: var(--mauve);
+  margin: 0px 0px 0px 0px;
 }
 
 /* === DISK WIDGET === */
 .disk-widget {
   background-color: var(--crust);
-  margin: 4px 0;
-  border-radius: 12px;
+  margin: 1px 0px;
+  border-radius: 9px;
   border: 0;
 }
 
 .disk-widget .icon {
   color: var(--teal);
+  margin: 0px 0px 0px 0px;
 }
 
 .disk-group {
@@ -316,7 +285,7 @@
   background-color: rgba(255, 255, 255, 0.06);
 }
 
-/* === BIN WIDGET === */
+/* === RECYCLE BIN WIDGET === */
 .recycle-bin-widget {
   background-color: var(--crust);
   margin: 1px 0px;
@@ -325,7 +294,7 @@
 }
 
 .recycle-bin-widget .icon {
-  color: var(--maroon);
+  color: var(--rosewater);
   margin: 0px 0px 0px 0px;
 }
 
