@@ -28,8 +28,18 @@ bars:
       right: 0
     widgets:
       left: ["home", "media", "systray", "apps"]
-      center: ["taskbar", "launchpad"]
-      right: ["clock", "cpu", "memory", "disk", "bin", "volume", "power_menu"]
+      center: ["taskbar"]
+      right:
+        [
+          "launchpad",
+          "clock",
+          "cpu",
+          "memory",
+          "disk",
+          "bin",
+          "volume",
+          "power_menu",
+        ]
 widgets:
   home:
     type: "yasb.home.HomeWidget"
@@ -76,7 +86,7 @@ widgets:
       label_position: "left"
       icon_size: 16
       pin_click_modifier: "alt"
-      show_unpinned: true
+      show_unpinned: false
       show_unpinned_button: true
       show_battery: false
       show_volume: false
