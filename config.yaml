@@ -27,7 +27,7 @@ bars:
       bottom: 0
       right: 0
     widgets:
-      left: ["home", "media"]
+      left: ["home", "media", "systray", "apps"]
       center: ["taskbar", "launchpad"]
       right: ["clock", "cpu", "memory", "disk", "bin", "volume", "power_menu"]
 widgets:
@@ -47,6 +47,50 @@ widgets:
       alignment: "left"
       offset_left: 4
       offset_top: 0
+  apps:
+    type: "yasb.applications.ApplicationsWidget"
+    options:
+      label: "{data}"
+      app_list:
+        - { icon: "\uf489", launch: "wt" } # launch terminal
+        - {
+            icon: "C:\\Users\\juanm\\.config\\yasb\\launchpad\\icons\\visual_studio_code_1753384298668.png",
+            launch: "C:\\Users\\juanm\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Visual Studio Code\\Visual Studio Code.lnk",
+          } # open vscode
+      container_padding:
+        top: 0
+        left: 0
+        bottom: 0
+        right: 0
+      label_shadow:
+        enabled: true
+        color: "black"
+        radius: 3
+        offset: [1, 1]
+  systray:
+    type: "yasb.systray.SystrayWidget"
+    options:
+      class_name: "systray"
+      label_collapsed: "▼"
+      label_expanded: "▶"
+      label_position: "left"
+      icon_size: 16
+      pin_click_modifier: "alt"
+      show_unpinned: true
+      show_unpinned_button: true
+      show_battery: false
+      show_volume: false
+      show_network: false
+      container_padding:
+        top: 0
+        left: 0
+        bottom: 0
+        right: 0
+      btn_shadow:
+        enabled: true
+        color: "black"
+        radius: 3
+        offset: [1, 1]
   launchpad:
     type: "yasb.launchpad.LaunchpadWidget"
     options:
