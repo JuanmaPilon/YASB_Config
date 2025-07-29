@@ -15,6 +15,56 @@
   --sapphire: #74c7ec;
   --blue: #89b4fa;
   --lavender: #b4befe;
+  --cream: #f5e5c8;
+  --stone: #c6d0f5;
+  --dust: #a5adce;
+  --fog: #b8c0e0;
+  --cloud: #dce0f8;
+  --mint: #a6f0c6;
+  --aqua: #8bd5ca;
+  --turquoise: #7dcfff;
+  --periwinkle: #b4c7f5;
+  --coral: #f28fad;
+  --orchid: #dba0f5;
+  --amber: #f9cf8f;
+  --lime: #c3e88d;
+  --fire: #ff757f;
+  --warning: #ffb86c;
+  --info: #8aadf4;
+  --success: #a6da95;
+  --critical: #ed8796;
+  --neon-blue: #00eaff;
+  --neon-green: #5eff8e;
+  --neon-pink: #ff5baf;
+  --neon-purple: #c75bff;
+  --neon-orange: #ff944d;
+  --neon-yellow: #f9ff56;
+  --neon-red: #ff4c4c;
+  --hot-pink: #ff66cc;
+  --vivid-cyan: #00ffff;
+  --vivid-lime: #b6ff00;
+  --vivid-violet: #a259ff;
+  --vivid-orange: #ff7b00;
+  --neon-magenta: #ff00ff;
+  --neon-purple: #bf00ff;
+  --neon-blue: #00eaff;
+  --electric-blue: #008cff;
+  --neon-green: #39ff14;
+  --electric-green: #00ff84;
+  --neon-cyan: #00ffff;
+  --aqua-electric: #00ffe1;
+  --neon-yellow: #f9ff56;
+  --lemon-glow: #fff700;
+  --neon-orange: #ff7300;
+  --hot-orange: #ff5500;
+  --neon-red: #ff3131;
+  --lava-red: #ff0000;
+  --neon-pink: #ff44cc;
+  --fuchsia-bright: #ff33cc;
+  --neon-lime: #ccff00;
+  --neon-turquoise: #30fdfa;
+  --vivid-indigo: #5f00ff;
+  --vivid-violet: #a259ff;
 
   /* Text colors */
   --text: #cdd6f4;
@@ -137,6 +187,19 @@
   font-size: 12px;
   color: var(--white);
   font-weight: 800;
+}
+
+/* === LAUNCHPAD WIDGET === */
+.launchpad-widget {
+  background-color: var(--crust);
+  margin: 1px 0px;
+  border-radius: 9px;
+  border: 0;
+}
+
+.launchpad-widget .icon {
+  color: var(--neon-orange);
+  margin: 0px 0px 0px 0px;
 }
 
 /* Calendar dropdown */

@@ -104,9 +104,9 @@ widgets:
   launchpad:
     type: "yasb.launchpad.LaunchpadWidget"
     options:
-      label: "<span>\udb85\udcde</span>"
+      label: "<span>\udb81\udf26</span>"
       search_placeholder: "Search for apps..."
-      app_icon_size: 60
+      app_icon_size: 80
       window:
         fullscreen: false
         width: 600
@@ -116,7 +116,7 @@ widgets:
         enable_blur: true
         round_corners: true
         round_corners_type: "normal"
-        border_color: "system"
+        border_color: "#00eaff"
       window_animation:
         fade_in_duration: 200
         fade_out_duration: 200
