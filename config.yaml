@@ -109,14 +109,14 @@ widgets:
       app_icon_size: 80
       window:
         fullscreen: false
-        width: 600
-        height: 400
+        width: 800
+        height: 500
         overlay_block: true
       window_style:
         enable_blur: true
         round_corners: true
         round_corners_type: "normal"
-        border_color: "#00eaff"
+        border_color: "#b4befe"
       window_animation:
         fade_in_duration: 200
         fade_out_duration: 200
