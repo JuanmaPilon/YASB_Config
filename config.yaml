@@ -62,11 +62,18 @@ widgets:
     options:
       label: "{data}"
       app_list:
-        - { icon: "\uf489", launch: "wt" } # launch terminal
         - {
             icon: "C:\\Users\\juanm\\.config\\yasb\\launchpad\\icons\\visual_studio_code_1753384298668.png",
             launch: "C:\\Users\\juanm\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Visual Studio Code\\Visual Studio Code.lnk",
           } # open vscode
+        - {
+            icon: "C:\\Users\\juanm\\.config\\yasb\\launchpad\\icons\\whatsapp_1753385430813.png",
+            launch: "explorer.exe shell:AppsFolder\\5319275A.WhatsAppDesktop_cv1g1gvanyjgm!App",
+          } # open whatsapp
+        - {
+            icon: "C:\\Users\\juanm\\.config\\yasb\\launchpad\\icons\\brave_1753823021212.png",
+            launch: "C:\\Program Files\\BraveSoftware\\Brave-Browser\\Application\\brave.exe",
+          } # open brave explorer
       container_padding:
         top: 0
         left: 0
