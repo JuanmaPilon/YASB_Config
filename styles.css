@@ -160,21 +160,6 @@
   margin: 0 8px;
 }
 
-/* === AUDIO WIDGET === */
-.audio-menu {
-  background-color: var(--mantle);
-}
-
-.audio-container .device {
-  font-size: 20px;
-  background-color: transparent;
-  border: none;
-  padding: 6px 8px 6px 4px;
-  margin: 2px 0;
-  font-size: 12px;
-  border-radius: 4px;
-}
-
 /* === MEDIA WIDGET === */
 .media-widget {
   background-color: var(--crust);
@@ -187,6 +172,22 @@
   font-size: 12px;
   color: var(--white);
   font-weight: 800;
+}
+
+/* === SYSTRAY WIDGET === */
+.systray-widget {
+  background-color: var(--crust);
+  margin: 1px 0px;
+  border-radius: 9px;
+  border: 0;
+}
+
+/* === APPLICATIONS WIDGET === */
+.applications-widget {
+  background-color: var(--crust);
+  margin: 1px 0px;
+  border-radius: 9px;
+  border: 0;
 }
 
 /* === LAUNCHPAD WIDGET === */
@@ -236,7 +237,7 @@
   font-size: 14px;
 }
 
-/* Calendar dropdown */
+/* === CALENDAR WIDGET === */
 .calendar {
   background-color: var(--mantle);
 }

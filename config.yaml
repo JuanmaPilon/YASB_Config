@@ -41,6 +41,7 @@ bars:
           "power_menu",
         ]
 widgets:
+  ### HOME WIDGET ###
   home:
     type: "yasb.home.HomeWidget"
     options:
@@ -57,111 +58,7 @@ widgets:
       alignment: "left"
       offset_left: 4
       offset_top: 0
-  apps:
-    type: "yasb.applications.ApplicationsWidget"
-    options:
-      label: "{data}"
-      app_list:
-        - {
-            icon: "C:\\Users\\juanm\\.config\\yasb\\launchpad\\icons\\visual_studio_code_1753384298668.png",
-            launch: "C:\\Users\\juanm\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Visual Studio Code\\Visual Studio Code.lnk",
-          } # open vscode
-        - {
-            icon: "C:\\Users\\juanm\\.config\\yasb\\launchpad\\icons\\whatsapp_1753385430813.png",
-            launch: "explorer.exe shell:AppsFolder\\5319275A.WhatsAppDesktop_cv1g1gvanyjgm!App",
-          } # open whatsapp
-        - {
-            icon: "C:\\Users\\juanm\\.config\\yasb\\launchpad\\icons\\brave_1753823021212.png",
-            launch: "C:\\Program Files\\BraveSoftware\\Brave-Browser\\Application\\brave.exe",
-          } # open brave explorer
-      container_padding:
-        top: 0
-        left: 0
-        bottom: 0
-        right: 0
-      label_shadow:
-        enabled: true
-        color: "black"
-        radius: 3
-        offset: [1, 1]
-  systray:
-    type: "yasb.systray.SystrayWidget"
-    options:
-      class_name: "systray"
-      label_collapsed: "▼"
-      label_expanded: "▶"
-      label_position: "left"
-      icon_size: 16
-      pin_click_modifier: "alt"
-      show_unpinned: false
-      show_unpinned_button: true
-      show_battery: false
-      show_volume: false
-      show_network: false
-      container_padding:
-        top: 0
-        left: 0
-        bottom: 0
-        right: 0
-      btn_shadow:
-        enabled: true
-        color: "black"
-        radius: 3
-        offset: [1, 1]
-  launchpad:
-    type: "yasb.launchpad.LaunchpadWidget"
-    options:
-      label: "<span>\udb81\udf26</span>"
-      search_placeholder: "Search for apps..."
-      app_icon_size: 80
-      window:
-        fullscreen: false
-        width: 800
-        height: 500
-        overlay_block: true
-      window_style:
-        enable_blur: true
-        round_corners: true
-        round_corners_type: "normal"
-        border_color: "#b4befe"
-      window_animation:
-        fade_in_duration: 200
-        fade_out_duration: 200
-      callbacks:
-        on_left: "toggle_launchpad"
-      app_title_shadow:
-        enabled: true
-        color: "#00000090"
-        offset: [1, 1]
-        radius: 2
-      app_icon_shadow:
-        enabled: true
-        color: "#00000090"
-        offset: [0, 2]
-        radius: 8
-  cpu:
-    type: "yasb.cpu.CpuWidget"
-    options:
-      label: "<span>\uf4bc</span> {info[percent][total]}%"
-      label_alt: "<span>\uf4bc</span> {info[cpu_percent]}"
-      update_interval: 2000
-      histogram_num_columns: 8
-      callbacks:
-        on_left: "exec cmd /c start taskmgr"
-      label_shadow:
-        enabled: true
-        color: "black"
-        radius: 3
-        offset: [1, 1]
-  memory:
-    type: "yasb.memory.MemoryWidget"
-    options:
-      label: "<span>\uefc5</span>{virtual_mem_outof}"
-      label_alt: "<span>\uf4bc</span>{virtual_mem_outof}"
-      update_interval: 2000
-      callbacks:
-        on_right: "exec cmd /c Taskmgr"
-        on_left: "do_nothing"
+  ### MEDIA WIDGET ###
   media:
     type: "yasb.media.MediaWidget"
     options:
@@ -169,9 +66,9 @@ widgets:
       label_alt: "{title}"
       hide_empty: true
       callbacks:
-        on_left: "toggle_label"
+        on_left: "exec cmd /c start spotify://queue"
         on_middle: "do_nothing"
-        on_right: "do_nothing"
+        on_right: "toggle_label"
       max_field_size:
         label: 20
         label_alt: 20
@@ -221,13 +118,154 @@ widgets:
         color: "black"
         radius: 3
         offset: [1, 1]
-  bin:
-    type: "yasb.recycle_bin.RecycleBinWidget"
+  ### SYSTRAY WIDGET ###
+  systray:
+    type: "yasb.systray.SystrayWidget"
     options:
-      label: "<span>{icon}</span> Items {items_count}"
-      label_alt: "Items {items_count}"
+      class_name: "systray"
+      label_collapsed: "▼"
+      label_expanded: "▶"
+      label_position: "left"
+      icon_size: 16
+      pin_click_modifier: "alt"
+      show_unpinned: false
+      show_unpinned_button: true
+      show_battery: false
+      show_volume: false
+      show_network: false
+      container_padding:
+        top: 0
+        left: 0
+        bottom: 0
+        right: 0
+      btn_shadow:
+        enabled: true
+        color: "black"
+        radius: 3
+        offset: [1, 1]
+  ### APPLICATIONS WIDGET ###
+  apps:
+    type: "yasb.applications.ApplicationsWidget"
+    options:
+      label: "{data}"
+      app_list:
+        - {
+            icon: "C:\\Users\\juanm\\.config\\yasb\\launchpad\\icons\\visual_studio_code_1753384298668.png",
+            launch: "C:\\Users\\juanm\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Visual Studio Code\\Visual Studio Code.lnk",
+          } # open vscode
+        - {
+            icon: "C:\\Users\\juanm\\.config\\yasb\\launchpad\\icons\\whatsapp_1753385430813.png",
+            launch: "explorer.exe shell:AppsFolder\\5319275A.WhatsAppDesktop_cv1g1gvanyjgm!App",
+          } # open whatsapp
+        - {
+            icon: "C:\\Users\\juanm\\.config\\yasb\\launchpad\\icons\\brave_1753823021212.png",
+            launch: "C:\\Program Files\\BraveSoftware\\Brave-Browser\\Application\\brave.exe",
+          } # open brave explorer
+      container_padding:
+        top: 0
+        left: 0
+        bottom: 0
+        right: 0
+      label_shadow:
+        enabled: true
+        color: "black"
+        radius: 3
+        offset: [1, 1]
+  ### TASKBAR WIDGET ###
+  taskbar:
+    type: "yasb.taskbar.TaskbarWidget"
+    options:
+      icon_size: 24
+      animation:
+        enabled: true
+        duration: 200
+        type: "fadeInOut"
+      title_label:
+        enabled: false
+        show: "focused"
+        min_length: 10
+        max_length: 30
+      ignore_apps:
+        processes: []
+        titles: []
+        classes: []
+      container_padding:
+        top: 0
+        left: 0
+        bottom: 0
+        right: 0
+  ### LAUNCHPAD WIDGET ###
+  launchpad:
+    type: "yasb.launchpad.LaunchpadWidget"
+    options:
+      label: "<span>\udb81\udf26</span>"
+      search_placeholder: "Search for apps..."
+      app_icon_size: 80
+      window:
+        fullscreen: false
+        width: 800
+        height: 500
+        overlay_block: true
+      window_style:
+        enable_blur: true
+        round_corners: true
+        round_corners_type: "normal"
+        border_color: "#b4befe"
+      window_animation:
+        fade_in_duration: 200
+        fade_out_duration: 200
       callbacks:
-        on_left: "exec cmd /c start shell:RecycleBinFolder"
+        on_left: "toggle_launchpad"
+      app_title_shadow:
+        enabled: true
+        color: "#00000090"
+        offset: [1, 1]
+        radius: 2
+      app_icon_shadow:
+        enabled: true
+        color: "#00000090"
+        offset: [0, 2]
+        radius: 8
+  ### CLOCK WIDGET ###
+  clock:
+    type: "yasb.clock.ClockWidget"
+    options:
+      label: "<span>\uf017</span>{%H:%M}"
+      label_alt: "<span>\uf017</span>{%A, %B %d. %Y %H:%M}"
+      locale: "es_ES.UTF-8"
+      timezones: []
+      calendar:
+        round_corners: true
+        round_corners_type: "small"
+        border_color: "#7aa2f7"
+        alignment: "center"
+        offset_top: 0
+  ### CPU WIDGET ###
+  cpu:
+    type: "yasb.cpu.CpuWidget"
+    options:
+      label: "<span>\uf4bc</span> {info[percent][total]}%"
+      label_alt: "<span>\uf4bc</span> {info[cpu_percent]}"
+      update_interval: 2000
+      histogram_num_columns: 8
+      callbacks:
+        on_left: "exec cmd /c start taskmgr"
+      label_shadow:
+        enabled: true
+        color: "black"
+        radius: 3
+        offset: [1, 1]
+  ### MEMORY WIDGET ###
+  memory:
+    type: "yasb.memory.MemoryWidget"
+    options:
+      label: "<span>\uefc5</span>{virtual_mem_outof}"
+      label_alt: "<span>\uf4bc</span>{virtual_mem_outof}"
+      update_interval: 2000
+      callbacks:
+        on_right: "exec cmd /c Taskmgr"
+        on_left: "do_nothing"
+  ### DISK WIDGET ###
   disk:
     type: "yasb.disk.DiskWidget"
     options:
@@ -282,76 +320,15 @@ widgets:
       max_length: 40
       max_length_ellipsis: "..."
       monitor_exclusive: true
-  windows_workspaces:
-    type: "yasb.windows_desktops.WorkspaceWidget"
+  ### RECYCLE BIN WIDGET ###
+  bin:
+    type: "yasb.recycle_bin.RecycleBinWidget"
     options:
-      label_workspace_btn: "\udb81\udc3d"
-      label_workspace_active_btn: "\udb81\udc3e"
-      container_padding:
-        top: 0
-        left: 8
-        bottom: 0
-        right: 8
-      btn_shadow:
-        enabled: true
-        color: "black"
-        radius: 3
-        offset: [1, 1]
-  clock:
-    type: "yasb.clock.ClockWidget"
-    options:
-      label: "<span>\uf017</span>{%H:%M}"
-      label_alt: "<span>\uf017</span>{%A, %B %d. %Y %H:%M}"
-      locale: "es_ES.UTF-8"
-      timezones: []
-      calendar:
-        round_corners: true
-        round_corners_type: "small"
-        border_color: "#7aa2f7"
-        alignment: "center"
-        offset_top: 0
-  taskbar:
-    type: "yasb.taskbar.TaskbarWidget"
-    options:
-      icon_size: 24
-      animation:
-        enabled: true
-        duration: 200
-        type: "fadeInOut"
-      title_label:
-        enabled: false
-        show: "focused"
-        min_length: 10
-        max_length: 30
-      ignore_apps:
-        processes: []
-        titles: []
-        classes: []
-      container_padding:
-        top: 0
-        left: 0
-        bottom: 0
-        right: 0
-  wifi:
-    type: "yasb.wifi.WifiWidget"
-    options:
-      label: "<span>{wifi_icon}</span> {wifi_strength}%"
-      label_alt: "<span>{wifi_icon}</span> {wifi_name} {wifi_strength}%"
-      ethernet_label: "<span>{wifi_icon}</span>"
-      ethernet_label_alt: "<span>{wifi_icon}</span> {wifi_name}"
-      ethernet_icon: "\uf108"
-      update_interval: 5000
+      label: "<span>{icon}</span> Items {items_count}"
+      label_alt: "Items {items_count}"
       callbacks:
-        on_left: "exec quick_settings"
-        on_middle: "do_nothing"
-        on_right: "toggle_label"
-      wifi_icons: [
-          "\udb82\udd2e", # Icon for 0% strength
-          "\udb82\udd1f", # Icon for 1-20% strength
-          "\udb82\udd22", # Icon for 21-40% strength
-          "\udb82\udd25", # Icon for 41-80% strength
-          "\udb82\udd28", # Icon for 81-100% strength
-        ]
+        on_left: "exec cmd /c start shell:RecycleBinFolder"
+  ### VOLUME WIDGET ###
   volume:
     type: "yasb.volume.VolumeWidget"
     options:
@@ -373,6 +350,7 @@ widgets:
         offset_top: 0
       callbacks:
         on_right: "toggle_mute"
+  ### POWER MENU ###
   power_menu:
     type: "yasb.power_menu.PowerMenuWidget"
     options:
