@@ -175,19 +175,34 @@
 }
 
 /* === SYSTRAY WIDGET === */
-.systray-widget {
+.systray {
+  margin: 0px -3px;
+}
+
+.systray .unpinned-visibility-btn {
+  border-radius: 9px;
+  height: 18px;
+  width: 18px;
+  background-color: var(--crust);
+  color: white;
+}
+
+.systray .unpinned-visibility-btn:checked {
+  background: var(--neon-blue);
+  border: 1px solid var(--neon-blue);
+}
+
+/* === APPLICATIONS WIDGET === */
+.apps-widget {
   background-color: var(--crust);
   margin: 1px 0px;
   border-radius: 9px;
   border: 0;
 }
 
-/* === APPLICATIONS WIDGET === */
-.applications-widget {
-  background-color: var(--crust);
-  margin: 1px 0px;
-  border-radius: 9px;
-  border: 0;
+.apps-widget .widget-container .label {
+  color: var(--neon-blue);
+  margin: 0px 0px 0px 0px;
 }
 
 /* === LAUNCHPAD WIDGET === */

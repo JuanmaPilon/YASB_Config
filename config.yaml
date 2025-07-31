@@ -123,10 +123,10 @@ widgets:
     type: "yasb.systray.SystrayWidget"
     options:
       class_name: "systray"
-      label_collapsed: "▼"
-      label_expanded: "▶"
-      label_position: "left"
-      icon_size: 16
+      label_collapsed: "\udb81\udf2e"
+      label_expanded: "\udb81\udf34"
+      label_position: "center"
+      icon_size: 20
       pin_click_modifier: "alt"
       show_unpinned: false
       show_unpinned_button: true
@@ -139,10 +139,10 @@ widgets:
         bottom: 0
         right: 0
       btn_shadow:
-        enabled: true
+        enabled: false
         color: "black"
-        radius: 3
-        offset: [1, 1]
+        radius: 10
+        offset: [20, 20]
   ### APPLICATIONS WIDGET ###
   apps:
     type: "yasb.applications.ApplicationsWidget"
@@ -169,7 +169,7 @@ widgets:
       label_shadow:
         enabled: true
         color: "black"
-        radius: 3
+        radius: 0
         offset: [1, 1]
   ### TASKBAR WIDGET ###
   taskbar:
