@@ -90,10 +90,10 @@ widgets:
         ease_pos: 0.8
         ease_min: 0.5
       icons:
-        prev_track: "<span style='color:#ADD8E6; font-size:15px'>\uf048</span> "
-        next_track: " <span style='color:#ADD8E6; font-size:15px'>\uf051</span> "
-        play: " <span style='color:#ADD8E6; font-size:15px'>\uf04b</span> "
-        pause: " <span style='color:#ADD8E6; font-size:15px'>\uf04d</span> "
+        prev_track: "\uf048"
+        next_track: "\uf051"
+        play: "\uf04b"
+        pause: "\uf04d"
       media_menu:
         blur: false
         round_corners: true
