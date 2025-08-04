@@ -103,16 +103,16 @@ widgets:
         direction: "down"
         offset_top: 6
         offset_left: 0
-        thumbnail_corner_radius: 8
+        thumbnail_corner_radius: 20
         thumbnail_size: 200
         max_title_size: 80
         max_artist_size: 20
         show_source: true
       media_menu_icons:
-        play: "  \uf04b"
-        pause: "  \uf04d"
-        prev_track: "  \uf048"
-        next_track: "  \ue893"
+        play: "\uf04b"
+        pause: "\uf04d"
+        prev_track: "\uf048"
+        next_track: "\ue893"
       label_shadow:
         enabled: true
         color: "black"

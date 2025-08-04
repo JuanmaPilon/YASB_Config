@@ -163,57 +163,57 @@
 /* === MEDIA WIDGET === */
 .media-widget {
   background-color: var(--crust);
-  margin: 1px 0px;
-  border-radius: 9px;
+  margin: 0px 0px;
+  border-radius: 12px;
   border: 0;
 }
 
 .media-widget .label {
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 800;
   margin: 0px 0px 0px 0px;
-}
-
-.media-menu {
-  background-color: var(--mantle);
-  padding: 0;
-  margin-left: 2px;
 }
 
 .media-widget .btn.play {
   color: var(--sapphire);
   margin: 0px 0px 0px 0px;
-  padding: 0px 8px;
-  font-size: 20px;
+  padding: 2px 8px;
+  font-size: 25px;
+  border-radius: 8px;
+  margin: 0px 0px;
 }
 
 .media-widget .btn.play:hover {
-  color: var(--neon-blue);
-  background-color: rgba(255, 255, 255, 0.05);
+  color: var(--electric-blue);
+  background-color: var(--aqua-electric);
 }
 
 .media-widget .btn.prev {
   color: var(--sapphire);
   margin: 0px 0px 0px 0px;
-  padding: 0px 1px;
-  font-size: 15px;
+  padding: 2px 8px;
+  font-size: 17px;
+  border-radius: 8px;
+  margin: 0px 0px;
 }
 
 .media-widget .btn.prev:hover {
-  color: var(--neon-blue);
-  background-color: rgba(255, 255, 255, 0.05);
+  color: var(--electric-blue);
+  background-color: var(--aqua-electric);
 }
 
 .media-widget .btn.next {
   color: var(--sapphire);
   margin: 0px 0px 0px 0px;
-  padding: 0px 1px;
-  font-size: 15px;
+  padding: 2px 8px;
+  font-size: 17px;
+  border-radius: 8px;
+  margin: 0px 0px;
 }
 
 .media-widget .btn.next:hover {
-  color: var(--neon-blue);
-  background-color: rgba(255, 255, 255, 0.05);
+  color: var(--electric-blue);
+  background-color: var(--aqua-electric);
 }
 
 /* === SYSTRAY WIDGET === */
