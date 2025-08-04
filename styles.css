@@ -169,9 +169,10 @@
 }
 
 .media-widget .label {
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 800;
-  margin: 0px 0px 0px 0px;
+  border: 0px;
+  border-radius: 10px;
 }
 
 .media-widget .btn.play {

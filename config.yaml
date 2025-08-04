@@ -72,13 +72,13 @@ widgets:
       max_field_size:
         label: 20
         label_alt: 20
-      show_thumbnail: true
+      show_thumbnail: false
       controls_only: false
       controls_left: true
       controls_hide: false
       thumbnail_alpha: 80
-      thumbnail_padding: 20
-      thumbnail_corner_radius: 20
+      thumbnail_padding: 10
+      thumbnail_corner_radius: 10
       scrolling_label:
         enabled: true
         update_interval_ms: 33
@@ -101,9 +101,9 @@ widgets:
         border_color: "system"
         alignment: "right"
         direction: "down"
-        offset_top: 6
+        offset_top: 0
         offset_left: 0
-        thumbnail_corner_radius: 20
+        thumbnail_corner_radius: 6
         thumbnail_size: 200
         max_title_size: 80
         max_artist_size: 20
@@ -113,11 +113,6 @@ widgets:
         pause: "\uf04d"
         prev_track: "\uf048"
         next_track: "\ue893"
-      label_shadow:
-        enabled: true
-        color: "black"
-        radius: 3
-        offset: [1, 1]
   ### SYSTRAY WIDGET ###
   systray:
     type: "yasb.systray.SystrayWidget"
