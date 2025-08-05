@@ -170,7 +170,7 @@ widgets:
   taskbar:
     type: "yasb.taskbar.TaskbarWidget"
     options:
-      icon_size: 24
+      icon_size: 25
       animation:
         enabled: true
         duration: 200

@@ -186,7 +186,7 @@
 
 .media-widget .btn.play:hover {
   color: var(--electric-blue);
-  background-color: var(--aqua-electric);
+  background-color: var(--text);
 }
 
 .media-widget .btn.prev {
@@ -200,7 +200,7 @@
 
 .media-widget .btn.prev:hover {
   color: var(--electric-blue);
-  background-color: var(--aqua-electric);
+  background-color: var(--text);
 }
 
 .media-widget .btn.next {
@@ -214,7 +214,7 @@
 
 .media-widget .btn.next:hover {
   color: var(--electric-blue);
-  background-color: var(--aqua-electric);
+  background-color: var(--text);
 }
 
 /* === SYSTRAY WIDGET === */
@@ -231,8 +231,13 @@
 }
 
 .systray .unpinned-visibility-btn:checked {
-  background: var(--neon-blue);
-  border: 1px solid var(--neon-blue);
+  color: var(--neon-red);
+  background: var(--crust);
+}
+
+.systray .unpinned-visibility-btn:hover {
+  color: var(--electric-blue);
+  background: var(--text);
 }
 
 /* === APPLICATIONS WIDGET === */
@@ -246,6 +251,18 @@
 .apps-widget .widget-container .label {
   color: var(--neon-blue);
   margin: 0px 0px 0px 0px;
+}
+
+/* === TASKBAR WIDGET === */
+.taskbar-widget .app-icon {
+  padding: 0px;
+  margin: 0px 0px;
+  padding: 0 3px;
+}
+
+.taskbar-widget .app-icon:hover {
+  border-radius: 7px;
+  background-color: var(--text);
 }
 
 /* === LAUNCHPAD WIDGET === */
