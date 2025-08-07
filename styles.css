@@ -289,37 +289,35 @@
 }
 
 .launchpad .app-icon {
+  min-width: 130px;
+  min-height: 120px;
   max-width: 160px;
-  min-width: 160px;
-  min-height: 140px;
   max-height: 160px;
 }
 
-.launchpad .app-icon:hover {
-  border: 2px solid var(--neon-pink);
-  background-color: rgba(255, 255, 255, 0.07);
-  box-shadow: 0 0 10px var(--neon-pink);
+.popup .widget-container {
+  background-color: red;
 }
 
-.launchpad .app-icon .title {
-  display: block;
-  font-family: "JetBrainsMono NFP";
-  font-size: 16px;
-  color: var(--subtext0);
-  text-align: center;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  max-width: 130px;
-  margin-top: 6px;
+.launchpad .app-icon:hover {
+  border: 2px solid var(--neon-blue);
+  background-color: var(--lavender);
+}
+
+.launchpad .launchpad-container {
+  border: 4px solid var(--lavender);
 }
 
 .launchpad .search-input {
-  background-color: rgba(255, 255, 255, 0.1);
-  border: 2px solid var(--lavender);
-  color: var(--neon-cyan);
-  font-weight: bold;
+  background-color: rgba(30, 30, 46, 0.9);
+  color: white;
+  border: 2px solid #89b4fa;
+  border-radius: 8px;
+  padding: 8px 12px;
   font-size: 14px;
+  font-family: "Segoe UI";
+  font-weight: 600;
+  outline: none;
 }
 
 /* === CALENDAR WIDGET === */

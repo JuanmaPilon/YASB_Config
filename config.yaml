@@ -205,7 +205,6 @@ widgets:
         enable_blur: true
         round_corners: true
         round_corners_type: "normal"
-        border_color: "#b4befe"
       window_animation:
         fade_in_duration: 200
         fade_out_duration: 200
