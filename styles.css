@@ -231,8 +231,8 @@
 }
 
 .systray .unpinned-visibility-btn:checked {
-  color: var(--neon-red);
-  background: var(--crust);
+  color: white;
+  background: var(--neon-red);
 }
 
 .systray .unpinned-visibility-btn:hover {
@@ -254,6 +254,11 @@
 }
 
 /* === TASKBAR WIDGET === */
+.taskbar-widget {
+  margin: 0px 0px;
+  border: 0;
+}
+
 .taskbar-widget .app-icon {
   padding: 0px;
   margin: 0px 0px;
@@ -262,7 +267,8 @@
 
 .taskbar-widget .app-icon:hover {
   border-radius: 7px;
-  background-color: var(--text);
+  background-color: var(--lavender);
+  border: 2px solid var(--electric-blue);
 }
 
 /* === LAUNCHPAD WIDGET === */
@@ -271,6 +277,10 @@
   margin: 1px 0px;
   border-radius: 9px;
   border: 0;
+}
+
+.launchpad-widget:hover {
+  background-color: var(--lavender);
 }
 
 .launchpad-widget .icon {
@@ -366,6 +376,10 @@
   border: 0;
 }
 
+.clock-widget:hover {
+  background-color: var(--lavender);
+}
+
 .clock-widget .icon {
   color: var(--sky);
   margin: 0px 0px 0px 0px;
@@ -377,6 +391,10 @@
   margin: 1px 0px;
   border-radius: 9px;
   border: 0;
+}
+
+.cpu-widget:hover {
+  background-color: var(--lavender);
 }
 
 .cpu-widget .icon {
@@ -392,6 +410,10 @@
   border: 0;
 }
 
+.memory-widget:hover {
+  background-color: var(--lavender);
+}
+
 .memory-widget .icon {
   color: var(--mauve);
   margin: 0px 0px 0px 0px;
@@ -403,6 +425,10 @@
   margin: 1px 0px;
   border-radius: 9px;
   border: 0;
+}
+
+.disk-widget:hover {
+  background-color: var(--lavender);
 }
 
 .disk-widget .icon {
@@ -466,6 +492,10 @@
   border: 0;
 }
 
+.recycle-bin-widget:hover {
+  background-color: var(--lavender);
+}
+
 .recycle-bin-widget .icon {
   color: var(--rosewater);
   margin: 0px 0px 0px 0px;
@@ -479,6 +509,10 @@
   border: 0;
 }
 
+.volume-widget:hover {
+  background-color: var(--lavender);
+}
+
 .volume-widget .icon {
   color: var(--blue);
   margin: 0px 0px 0px 0px;
@@ -490,6 +524,10 @@
   margin: 1px 0px;
   border-radius: 9px;
   border: 0;
+}
+
+.power-menu-widget:hover {
+  background-color: var(--lavender);
 }
 
 .power-menu-widget .label {
